@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FD3FBD72BF52BA30061561C /* arbuzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBD62BF52BA30061561C /* arbuzApp.swift */; };
-		3FD3FBD92BF52BA30061561C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBD82BF52BA30061561C /* ContentView.swift */; };
 		3FD3FBDB2BF52BA40061561C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDA2BF52BA40061561C /* Assets.xcassets */; };
 		3FD3FBDE2BF52BA40061561C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */; };
 		3FD3FBEA2BF52E2A0061561C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBE92BF52E2A0061561C /* Home.swift */; };
 		3FD3FBEE2BF52FB90061561C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBED2BF52FB90061561C /* Product.swift */; };
+		3FD3FBF02BF6150C0061561C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBEF2BF6150C0061561C /* CardView.swift */; };
+		3FD3FBF42BF641510061561C /* arbuzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBF22BF641510061561C /* arbuzApp.swift */; };
+		3FD3FBF82BF6423F0061561C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBF72BF6423F0061561C /* ContentView.swift */; };
+		3FD3FBFA2BF6426F0061561C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBF92BF6426E0061561C /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FD3FBD32BF52BA30061561C /* arbuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arbuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FD3FBD62BF52BA30061561C /* arbuzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arbuzApp.swift; sourceTree = "<group>"; };
-		3FD3FBD82BF52BA30061561C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FD3FBDA2BF52BA40061561C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FD3FBE92BF52E2A0061561C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3FD3FBED2BF52FB90061561C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		3FD3FBEF2BF6150C0061561C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3FD3FBF22BF641510061561C /* arbuzApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = arbuzApp.swift; path = ../../../.Trash/arbuzApp.swift; sourceTree = "<group>"; };
+		3FD3FBF72BF6423F0061561C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../.Trash/ContentView.swift; sourceTree = "<group>"; };
+		3FD3FBF92BF6426E0061561C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 				3FD3FBE62BF52DD60061561C /* ViewModel */,
 				3FD3FBE52BF52DCE0061561C /* Model */,
 				3FD3FBE42BF52DC30061561C /* View */,
-				3FD3FBD62BF52BA30061561C /* arbuzApp.swift */,
-				3FD3FBD82BF52BA30061561C /* ContentView.swift */,
 				3FD3FBDA2BF52BA40061561C /* Assets.xcassets */,
+				3FD3FBF22BF641510061561C /* arbuzApp.swift */,
+				3FD3FBF72BF6423F0061561C /* ContentView.swift */,
 				3FD3FBDC2BF52BA40061561C /* Preview Content */,
 			);
 			path = arbuz;
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				3FD3FBE92BF52E2A0061561C /* Home.swift */,
+				3FD3FBEF2BF6150C0061561C /* CardView.swift */,
+				3FD3FBF92BF6426E0061561C /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,10 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD3FBD92BF52BA30061561C /* ContentView.swift in Sources */,
+				3FD3FBF42BF641510061561C /* arbuzApp.swift in Sources */,
+				3FD3FBFA2BF6426F0061561C /* HeaderView.swift in Sources */,
+				3FD3FBF82BF6423F0061561C /* ContentView.swift in Sources */,
 				3FD3FBEE2BF52FB90061561C /* Product.swift in Sources */,
 				3FD3FBEA2BF52E2A0061561C /* Home.swift in Sources */,
-				3FD3FBD72BF52BA30061561C /* arbuzApp.swift in Sources */,
+				3FD3FBF02BF6150C0061561C /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
