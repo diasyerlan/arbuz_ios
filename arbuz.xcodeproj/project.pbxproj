@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FAE3F1E2BF6734D00AD1EA2 /* HeaderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F1D2BF6734D00AD1EA2 /* HeaderCardView.swift */; };
+		3FAE3F202BF67D4E00AD1EA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */; };
 		3FD3FBDB2BF52BA40061561C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDA2BF52BA40061561C /* Assets.xcassets */; };
 		3FD3FBDE2BF52BA40061561C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */; };
 		3FD3FBEA2BF52E2A0061561C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBE92BF52E2A0061561C /* Home.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FAE3F1D2BF6734D00AD1EA2 /* HeaderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCardView.swift; sourceTree = "<group>"; };
+		3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3FD3FBD32BF52BA30061561C /* arbuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arbuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3FBDA2BF52BA40061561C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				3FD3FBE92BF52E2A0061561C /* Home.swift */,
 				3FD3FBEF2BF6150C0061561C /* CardView.swift */,
 				3FD3FBF92BF6426E0061561C /* HeaderView.swift */,
+				3FAE3F1D2BF6734D00AD1EA2 /* HeaderCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 		3FD3FBE62BF52DD60061561C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,7 +182,9 @@
 				3FD3FBF42BF641510061561C /* arbuzApp.swift in Sources */,
 				3FD3FBFA2BF6426F0061561C /* HeaderView.swift in Sources */,
 				3FD3FBF82BF6423F0061561C /* ContentView.swift in Sources */,
+				3FAE3F202BF67D4E00AD1EA2 /* HomeViewModel.swift in Sources */,
 				3FD3FBEE2BF52FB90061561C /* Product.swift in Sources */,
+				3FAE3F1E2BF6734D00AD1EA2 /* HeaderCardView.swift in Sources */,
 				3FD3FBEA2BF52E2A0061561C /* Home.swift in Sources */,
 				3FD3FBF02BF6150C0061561C /* CardView.swift in Sources */,
 			);

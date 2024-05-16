@@ -12,19 +12,20 @@ struct Product: Identifiable{
     var title: String
     var price: Int
     var image: String
+    var description: String
 }
 
 var products = [
-    Product(title: "Pizza", price: 10, image: "pizza"),
-    Product(title: "Burger", price: 8, image: "burger"),
-    Product(title: "Salad", price: 6, image: "salad"),
-    Product(title: "Sushi", price: 15, image: "sushi"),
-    Product(title: "Pasta", price: 12, image: "pasta")
+    Product(title: "Pizza", price: 10, image: "pizza", description: "Delicious Italian pizza"),
+    Product(title: "Burger", price: 8, image: "burger", description: "Classic beef burger with cheese"),
+    Product(title: "Salad", price: 6, image: "salad", description: "Fresh garden salad with veggies"),
+    Product(title: "Sushi", price: 15, image: "sushi", description: "Assorted sushi rolls with fish and rice"),
+    Product(title: "Pasta", price: 12, image: "pasta", description: "Spaghetti pasta with tomato sauce")
 ]
 
 var groceryProducts = [
-    Product(title: "Apples", price: 2, image: "apples"),
-    Product(title: "Milk", price: 3, image: "milk"),
-    Product(title: "Bread", price: 2, image: "bread"),
-    Product(title: "Eggs", price: 2, image: "eggs")
+    Product(title: "Apples", price: 2, image: "apples", description: "Crisp and juicy apples"),
+    Product(title: "Milk", price: 3, image: "milk", description: "Fresh dairy milk"),
+    Product(title: "Bread", price: 2, image: "bread", description: "Soft and fluffy bread loaf"),
+    Product(title: "Eggs", price: 2, image: "eggs", description: "Farm-fresh eggs")
 ]
