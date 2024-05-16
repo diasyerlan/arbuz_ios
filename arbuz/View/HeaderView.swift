@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @EnvironmentObject var homeData: HomeViewModel
+    @Binding var product: Product?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            HStack {
+                HeaderCardView(product: product!)
+            }
+            if homeData.offset > 250 {
+                Divider()
+            }
+        }.padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.white)
     }
 }
 
