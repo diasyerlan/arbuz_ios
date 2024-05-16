@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct CardView: View {
+    var size: CGFloat
     var product: Product
     var body: some View {
         VStack {
             Image(product.image)
                 .resizable()
-                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                .frame(width: 130, height: 130)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: size, height: size)
                 .cornerRadius(10)
             HStack {
                 Text(product.title)
