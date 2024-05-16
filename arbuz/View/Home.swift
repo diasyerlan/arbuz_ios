@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct Home: View {
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 15, content: {
-                ForEach(1...10, id: \.self) { count in
-                    /*@START_MENU_TOKEN@*/Text("Placeholder \(count)")/*@END_MENU_TOKEN@*/
+            LazyVStack(alignment: .leading, spacing: 15,pinnedViews: [.sectionHeaders], content: {
+                Section(header: HeaderView()) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(products) { product in
+                                CardView(product: product)
+                            }
+                        }
+                    }.padding()
+                        
                 }
             })
+            Spacer(minLength: 50)
+            LazyVGrid(columns: columns, spacing: 20, content: {
+                ForEach(groceryProducts) { product in
+                    CardView(product: product)
+                }
+            })
+            
         }
     }
 }
