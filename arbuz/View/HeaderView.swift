@@ -10,11 +10,11 @@ import SwiftUI
 struct HeaderView: View {
     
     @EnvironmentObject var homeData: HomeViewModel
-    @Binding var product: Product?
+    @Binding var product: Product
     var body: some View {
         VStack {
             ZStack {
-                HeaderCardView(product: product!)
+                CardView(isForHeader: true, size: 0, product: $product)
                     .opacity(homeData.offset > 200 ? 1 - (homeData.offset - 200) / 50.0 : 1)
 
                 Text("Fast. Beautiful. Delicious.")
