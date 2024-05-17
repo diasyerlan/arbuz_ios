@@ -11,6 +11,7 @@ struct Home: View {
     @StateObject var homeData = HomeViewModel()
     
     var body: some View {
+
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 15,pinnedViews: [.sectionHeaders], content: {
                 
@@ -24,7 +25,7 @@ struct Home: View {
                     }
                     return AnyView (
                         
-                        Image(homeData.product!.image)
+                        Image(homeData.product.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset : 0)).cornerRadius(2).offset(y: (offset > 0 ? -offset : 0))
@@ -38,9 +39,10 @@ struct Home: View {
                     CustomTitle(title: "Special Offer")
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(products) { product in
-                                CardView(size: 130, product: product)
+                        HStack{
+                            ForEach($homeData.products) { product in
+                                CardView(isForHeader: false, size: 130, product: product)
+
                             }
                         }
                     }.padding()
@@ -48,9 +50,9 @@ struct Home: View {
                     Divider().padding(.top)
                     CustomTitle(title: "More")
 
-                    LazyVGrid(columns: homeData.columns, spacing: 20, content: {
-                        ForEach(groceryProducts) { product in
-                            CardView(size: 160, product: product)
+                    LazyVGrid(columns: homeData.columns, spacing: 10, content: {
+                        ForEach($homeData.groceryProducts) { product in
+                            CardView(isForHeader: false, size: 170, product: product)
                         }
                     })
                         
