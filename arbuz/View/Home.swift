@@ -34,6 +34,7 @@ struct Home: View {
                 }.frame(height: 250)
                 
                 Section(header: HeaderView(product: $homeData.product)) {
+                    Spacer(minLength: 10)
                     CustomTitle(title: "Special Offer")
                     
                     ScrollView(.horizontal, showsIndicators: false) {
