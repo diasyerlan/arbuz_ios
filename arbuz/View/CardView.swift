@@ -96,5 +96,5 @@ struct CardView: View {
 #Preview {
    
     
-    Home()
+    HomeView()
 }
