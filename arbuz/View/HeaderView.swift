@@ -14,20 +14,27 @@ struct HeaderView: View {
     var body: some View {
         VStack {
             ZStack {
-                CardView(isForHeader: true, size: 0, product: $product)
-                    .opacity(homeData.offset > 200 ? 1 - (homeData.offset - 200) / 50.0 : 1)
+                VStack {
+                    Spacer(minLength: 20)
+                    CardView(isForHeader: true, size: 0, product: $product)
+                    Divider()
 
-                Text("Fast. Beautiful. Delicious.")
-                    .opacity(homeData.offset > 200 ? (homeData.offset - 200) / 50.0 : 0)
-                    .font(.title)
-                    .fontWeight(.bold)
+                }
+                    .opacity(homeData.offset > 200 ? 1 - (homeData.offset - 200) / 50.0 : 1)
+                VStack {
+                    Text("Fast. Beautiful. Delicious.")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Divider()
+                }
+                .opacity(homeData.offset > 200 ? (homeData.offset - 200) / 50.0 : 0)
+
                     
             }
                 
             
-            if homeData.offset > 250 {
-                Divider()
-            }
+            
+          
         }.padding(.horizontal)
             .frame(height: 50)
             .background(Color.white)
@@ -35,5 +42,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    Home()
+    HomeView()
 }
