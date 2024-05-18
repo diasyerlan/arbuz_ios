@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct Home: View {
+    
     @StateObject var homeData = HomeViewModel()
+    @StateObject var cartData = CartViewModel()
     
     var body: some View {
 
@@ -40,7 +42,7 @@ struct Home: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack{
-                            ForEach($homeData.products) { product in
+                            ForEach($homeData.scrollProducts) { product in
                                 CardView(isForHeader: false, size: 130, product: product)
 
                             }
@@ -51,7 +53,7 @@ struct Home: View {
                     CustomTitle(title: "More")
 
                     LazyVGrid(columns: homeData.columns, spacing: 10, content: {
-                        ForEach($homeData.groceryProducts) { product in
+                        ForEach($homeData.gridProducts) { product in
                             CardView(isForHeader: false, size: 170, product: product)
                         }
                     })
@@ -69,6 +71,7 @@ struct Home: View {
                 .ignoresSafeArea(.all, edges: .top).opacity(homeData.offset > 250 ? 1: 0),
             alignment: .top)
         .environmentObject(homeData)
+        .environmentObject(cartData)
 
     }
 }
