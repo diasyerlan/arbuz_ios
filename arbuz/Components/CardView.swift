@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CardView: View {
-    @StateObject var cartData = CartViewModel()
-    @StateObject var homeData = HomeViewModel()
+    @EnvironmentObject var cartData: CartViewModel
+    @EnvironmentObject var homeData: HomeViewModel
     var isForHeader: Bool
     var size: CGFloat
     @Binding var product: Product
@@ -38,12 +38,18 @@ struct CardView: View {
                 }
                 
                 Button(action: {
-                    cartData.addToCart(product: product)
                     product.count += 1
+                    if(cartData.products.contains(product)) {
+                        cartData.removeFromCart(product: product)
+                    }
+                    cartData.addToCart(product: product)
+                    print(cartData.products)
+                    print("\n")
+                    
                 }) {
                     if(product.count <= 0) {
                         HStack (spacing: 30){
-                            Text("$\(product.price)").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            Text("\(product.price) ₸").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             Image(systemName: "plus")
                                 .foregroundColor(.green)
                                 .font(.system(size: 20, weight: .bold))
@@ -51,6 +57,9 @@ struct CardView: View {
                     else {
                         HStack (spacing: 15){
                             Button(action: {
+                                if product.count == 1 {
+                                    cartData.removeFromCart(product: product)
+                                }
                                 product.count -= 1
 
                             })
@@ -62,6 +71,13 @@ struct CardView: View {
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             Button(action: {
                                 product.count += 1
+                                if(cartData.products.contains(product)) {
+                                    cartData.removeFromCart(product: product)
+                                }
+                                cartData.addToCart(product: product)
+                                print(cartData.products)
+
+                                print("\n")
 
                             }) {
                                 Image(systemName: "plus")
@@ -72,7 +88,7 @@ struct CardView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                .background(product.count <= 0 ? .black.opacity(0.08) : .green)
+                .background(product.count <= 0 ? Color.black.opacity(0.08) : .green)
                 .foregroundColor(product.count <= 0 ? .black : .white)
                 .cornerRadius(16)
                 
@@ -96,5 +112,5 @@ struct CardView: View {
 #Preview {
    
     
-    HomeView()
+    ContentView()
 }

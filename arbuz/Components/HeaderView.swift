@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     
     @EnvironmentObject var homeData: HomeViewModel
+    @EnvironmentObject var cartData: CartViewModel
     @Binding var product: Product
     var body: some View {
         VStack {
@@ -38,9 +39,11 @@ struct HeaderView: View {
         }.padding(.horizontal)
             .frame(height: 50)
             .background(Color.white)
+            .environmentObject(cartData)
+            .environmentObject(homeData)
     }
 }
 
 #Preview {
-    HomeView()
+    ContentView()
 }
