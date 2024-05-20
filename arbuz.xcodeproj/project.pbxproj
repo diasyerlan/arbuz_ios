@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6794F72BFB464E00837215 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6794F62BFB464E00837215 /* TabBarView.swift */; };
 		3FAE3F202BF67D4E00AD1EA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */; };
 		3FAE3F222BF7CC1E00AD1EA2 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F212BF7CC1E00AD1EA2 /* CartViewModel.swift */; };
-		3FAE3F242BF88D6F00AD1EA2 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F232BF88D6F00AD1EA2 /* TabBarView.swift */; };
 		3FAE3F262BF8937B00AD1EA2 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F252BF8937B00AD1EA2 /* CartView.swift */; };
 		3FAE3F2B2BF8A02200AD1EA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F2A2BF8A02200AD1EA2 /* ContentView.swift */; };
+		3FAE3F2D2BF8A11300AD1EA2 /* ProductCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F2C2BF8A11300AD1EA2 /* ProductCartView.swift */; };
+		3FAE3F3C2BF9FE8000AD1EA2 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F3B2BF9FE8000AD1EA2 /* ProductCell.swift */; };
+		3FAE3F402BF9FEAF00AD1EA2 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F3F2BF9FEAF00AD1EA2 /* CartViewController.swift */; };
+		3FAE3F422BFA01FE00AD1EA2 /* CartViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F412BFA01FE00AD1EA2 /* CartViewControllerRepresentable.swift */; };
+		3FAE3F472BFB3C2C00AD1EA2 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 3FAE3F462BFB3C2C00AD1EA2 /* SimpleToast */; };
 		3FD3FBDB2BF52BA40061561C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDA2BF52BA40061561C /* Assets.xcassets */; };
 		3FD3FBDE2BF52BA40061561C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */; };
 		3FD3FBEA2BF52E2A0061561C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3FBE92BF52E2A0061561C /* HomeView.swift */; };
@@ -22,11 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6794F62BFB464E00837215 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = ../../../../.Trash/TabBarView.swift; sourceTree = "<group>"; };
 		3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3FAE3F212BF7CC1E00AD1EA2 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
-		3FAE3F232BF88D6F00AD1EA2 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3FAE3F252BF8937B00AD1EA2 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		3FAE3F2A2BF8A02200AD1EA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FAE3F2C2BF8A11300AD1EA2 /* ProductCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartView.swift; sourceTree = "<group>"; };
+		3FAE3F3B2BF9FE8000AD1EA2 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		3FAE3F3F2BF9FEAF00AD1EA2 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		3FAE3F412BFA01FE00AD1EA2 /* CartViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		3FD3FBD32BF52BA30061561C /* arbuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arbuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3FBDA2BF52BA40061561C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3FBDD2BF52BA40061561C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAE3F472BFB3C2C00AD1EA2 /* SimpleToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +61,23 @@
 		3FAE3F272BF89F2F00AD1EA2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3FAE3F232BF88D6F00AD1EA2 /* TabBarView.swift */,
+				3FAE3F382BF9FE2F00AD1EA2 /* UIKit */,
+				3FD3FBEF2BF6150C0061561C /* CardView.swift */,
 				3FD3FBF92BF6426E0061561C /* HeaderView.swift */,
+				3FAE3F2C2BF8A11300AD1EA2 /* ProductCartView.swift */,
+				3F6794F62BFB464E00837215 /* TabBarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3FAE3F382BF9FE2F00AD1EA2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3FAE3F3B2BF9FE8000AD1EA2 /* ProductCell.swift */,
+				3FAE3F3F2BF9FEAF00AD1EA2 /* CartViewController.swift */,
+				3FAE3F412BFA01FE00AD1EA2 /* CartViewControllerRepresentable.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		3FD3FBCA2BF52BA30061561C = {
@@ -100,7 +123,6 @@
 			children = (
 				3FAE3F2A2BF8A02200AD1EA2 /* ContentView.swift */,
 				3FD3FBE92BF52E2A0061561C /* HomeView.swift */,
-				3FD3FBEF2BF6150C0061561C /* CardView.swift */,
 				3FAE3F252BF8937B00AD1EA2 /* CartView.swift */,
 			);
 			path = View;
@@ -139,6 +161,9 @@
 			dependencies = (
 			);
 			name = arbuz;
+			packageProductDependencies = (
+				3FAE3F462BFB3C2C00AD1EA2 /* SimpleToast */,
+			);
 			productName = arbuz;
 			productReference = 3FD3FBD32BF52BA30061561C /* arbuz.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 3FD3FBCA2BF52BA30061561C;
+			packageReferences = (
+				3FAE3F452BFB3C2C00AD1EA2 /* XCRemoteSwiftPackageReference "SimpleToast" */,
+			);
 			productRefGroup = 3FD3FBD42BF52BA30061561C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,14 +223,18 @@
 			files = (
 				3FAE3F262BF8937B00AD1EA2 /* CartView.swift in Sources */,
 				3FAE3F2B2BF8A02200AD1EA2 /* ContentView.swift in Sources */,
+				3F6794F72BFB464E00837215 /* TabBarView.swift in Sources */,
 				3FD3FBF42BF641510061561C /* arbuzApp.swift in Sources */,
-				3FAE3F242BF88D6F00AD1EA2 /* TabBarView.swift in Sources */,
 				3FD3FBFA2BF6426F0061561C /* HeaderView.swift in Sources */,
 				3FAE3F202BF67D4E00AD1EA2 /* HomeViewModel.swift in Sources */,
 				3FAE3F222BF7CC1E00AD1EA2 /* CartViewModel.swift in Sources */,
+				3FAE3F402BF9FEAF00AD1EA2 /* CartViewController.swift in Sources */,
 				3FD3FBEE2BF52FB90061561C /* Product.swift in Sources */,
 				3FD3FBEA2BF52E2A0061561C /* HomeView.swift in Sources */,
+				3FAE3F2D2BF8A11300AD1EA2 /* ProductCartView.swift in Sources */,
 				3FD3FBF02BF6150C0061561C /* CardView.swift in Sources */,
+				3FAE3F3C2BF9FE8000AD1EA2 /* ProductCell.swift in Sources */,
+				3FAE3F422BFA01FE00AD1EA2 /* CartViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +376,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +406,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +442,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FAE3F452BFB3C2C00AD1EA2 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FAE3F462BFB3C2C00AD1EA2 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FAE3F452BFB3C2C00AD1EA2 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3FD3FBCB2BF52BA30061561C /* Project object */;
 }

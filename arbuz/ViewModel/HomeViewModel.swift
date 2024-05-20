@@ -16,9 +16,14 @@ class HomeViewModel: ObservableObject {
         GridItem(.flexible())
     ]
     @Published var product = headerProducts.randomElement()!
+    @Published var headProducts = headerProducts
     @Published var scrollProducts = products
     @Published var gridProducts = groceryProducts
     
-    
-
+    func fetchData() {
+        product = headerProducts.randomElement()!
+        headProducts = headerProducts
+        scrollProducts = products
+        gridProducts = groceryProducts
+        }
 }

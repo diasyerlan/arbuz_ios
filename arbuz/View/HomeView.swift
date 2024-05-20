@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @StateObject var homeData = HomeViewModel()
-    @StateObject var cartData = CartViewModel()
-    @State private var selectedTab: Tab = .house
+
+    @EnvironmentObject var homeData: HomeViewModel
+    @EnvironmentObject var cartData: CartViewModel
     
     var body: some View {
         
@@ -91,5 +90,5 @@ struct CustomTitle: View {
 }
 
 #Preview {
-    HomeView()
+    ContentView()
 }
