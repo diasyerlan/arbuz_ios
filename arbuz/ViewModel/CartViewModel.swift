@@ -12,7 +12,9 @@ class CartViewModel: ObservableObject {
                     updateTotal()
                 }
     }
-    @Published private(set) var total: Int = 0
+    @Published var total: Int = 0
+    @Published var isLoading = false
+
     
     func addToCart (product: Product) {
         products.append(product)

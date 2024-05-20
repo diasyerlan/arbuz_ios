@@ -27,7 +27,12 @@ struct ContentView: View {
                 case .cart:
                     CartView()
                 }
-                TabBarView(selectedTab: $selectedTab)
+                Spacer(minLength: 0)
+                Divider()
+                Spacer(minLength: 0)
+                TabBarView(selectedTab: $selectedTab).background(
+                    cartData.isLoading ? Color.black.opacity(0.1) : Color.white
+                )
                 
             }
             .edgesIgnoringSafeArea(.bottom)

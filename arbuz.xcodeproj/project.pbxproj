@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F6794F72BFB464E00837215 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6794F62BFB464E00837215 /* TabBarView.swift */; };
+		3F6794F92BFB65C700837215 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6794F82BFB65C700837215 /* CheckoutView.swift */; };
 		3FAE3F202BF67D4E00AD1EA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */; };
 		3FAE3F222BF7CC1E00AD1EA2 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F212BF7CC1E00AD1EA2 /* CartViewModel.swift */; };
 		3FAE3F262BF8937B00AD1EA2 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3F252BF8937B00AD1EA2 /* CartView.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		3F6794F62BFB464E00837215 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = ../../../../.Trash/TabBarView.swift; sourceTree = "<group>"; };
+		3F6794F82BFB65C700837215 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		3FAE3F1F2BF67D4E00AD1EA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3FAE3F212BF7CC1E00AD1EA2 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		3FAE3F252BF8937B00AD1EA2 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				3FAE3F2A2BF8A02200AD1EA2 /* ContentView.swift */,
 				3FD3FBE92BF52E2A0061561C /* HomeView.swift */,
 				3FAE3F252BF8937B00AD1EA2 /* CartView.swift */,
+				3F6794F82BFB65C700837215 /* CheckoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				3FAE3F262BF8937B00AD1EA2 /* CartView.swift in Sources */,
 				3FAE3F2B2BF8A02200AD1EA2 /* ContentView.swift in Sources */,
+				3F6794F92BFB65C700837215 /* CheckoutView.swift in Sources */,
 				3F6794F72BFB464E00837215 /* TabBarView.swift in Sources */,
 				3FD3FBF42BF641510061561C /* arbuzApp.swift in Sources */,
 				3FD3FBFA2BF6426F0061561C /* HeaderView.swift in Sources */,
