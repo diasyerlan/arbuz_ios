@@ -19,6 +19,8 @@ class HomeViewModel: ObservableObject {
     @Published var headProducts = headerProducts
     @Published var scrollProducts = products
     @Published var gridProducts = groceryProducts
+    @Published var showingBottomSheet = false
+
     
     func fetchData() {
         product = headerProducts.randomElement()!

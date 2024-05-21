@@ -21,6 +21,8 @@
 		3F41AE8A2BFBFB2900A7D97A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41AE792BFBFB2900A7D97A /* Product.swift */; };
 		3F41AE8B2BFBFB2900A7D97A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41AE7B2BFBFB2900A7D97A /* HomeViewModel.swift */; };
 		3F41AE8C2BFBFB2900A7D97A /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41AE7C2BFBFB2900A7D97A /* CartViewModel.swift */; };
+		3F470B042BFC7CEC003F5013 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F470B032BFC7CEC003F5013 /* ProductDetailsView.swift */; };
+		3F470B062BFC835E003F5013 /* ProductCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F470B052BFC835E003F5013 /* ProductCardButton.swift */; };
 		3F6795132BFBBDCD00837215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6795122BFBBDCD00837215 /* AppDelegate.swift */; };
 		3F6795172BFBBDCD00837215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6795162BFBBDCD00837215 /* ViewController.swift */; };
 		3F67951F2BFBBDCF00837215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F67951D2BFBBDCF00837215 /* LaunchScreen.storyboard */; };
@@ -44,6 +46,8 @@
 		3F41AE792BFBFB2900A7D97A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3F41AE7B2BFBFB2900A7D97A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3F41AE7C2BFBFB2900A7D97A /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		3F470B032BFC7CEC003F5013 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		3F470B052BFC835E003F5013 /* ProductCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardButton.swift; sourceTree = "<group>"; };
 		3F67950F2BFBBDCD00837215 /* arbuz_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arbuz_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6795122BFBBDCD00837215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6795162BFBBDCD00837215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				3F41AE6C2BFBFB2900A7D97A /* UIKit */,
 				3F41AE712BFBFB2900A7D97A /* ProductCartView.swift */,
 				3F41AE722BFBFB2900A7D97A /* HeaderView.swift */,
+				3F470B032BFC7CEC003F5013 /* ProductDetailsView.swift */,
+				3F470B052BFC835E003F5013 /* ProductCardButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F41AE8B2BFBFB2900A7D97A /* HomeViewModel.swift in Sources */,
+				3F470B062BFC835E003F5013 /* ProductCardButton.swift in Sources */,
 				3F6795172BFBBDCD00837215 /* ViewController.swift in Sources */,
 				3F67955A2BFBC1E800837215 /* MainTabBarController.swift in Sources */,
 				3F41AE872BFBFB2900A7D97A /* HomeView.swift in Sources */,
@@ -243,6 +250,7 @@
 				3F6795372BFBC1AA00837215 /* SceneDelegate.swift in Sources */,
 				3F41AE842BFBFB2900A7D97A /* ProductCartView.swift in Sources */,
 				3F41AE882BFBFB2900A7D97A /* CartView.swift in Sources */,
+				3F470B042BFC7CEC003F5013 /* ProductDetailsView.swift in Sources */,
 				3F41AE8A2BFBFB2900A7D97A /* Product.swift in Sources */,
 				3F41AE802BFBFB2900A7D97A /* CartViewController.swift in Sources */,
 				3F41AE852BFBFB2900A7D97A /* HeaderView.swift in Sources */,
