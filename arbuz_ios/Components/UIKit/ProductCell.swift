@@ -59,7 +59,7 @@ class ProductCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 150),
-
+            
             titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: -20),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -69,19 +69,19 @@ class ProductCell: UICollectionViewCell {
             countLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             countLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
             countLabel.heightAnchor.constraint(equalToConstant: 22),
-
+            
             priceLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             priceLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             priceLabel.topAnchor.constraint(equalTo: countLabel.bottomAnchor),
             priceLabel.heightAnchor.constraint(equalToConstant: 22),
-
+            
         ])
     }
     
     func configure(with product: Product) {
         imageView.image = UIImage(named: product.image)
         titleLabel.text = product.title
-        countLabel.text = "Quantity: \(product.count)" 
-        priceLabel.text = "\(product.price) ₸"
+        countLabel.text = "Quantity: \(product.count)"
+        priceLabel.text = "\(product.price * product.count) ₸"
     }
 }

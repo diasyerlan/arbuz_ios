@@ -22,7 +22,7 @@ struct ProductCardButton: View {
         }) {
             if(product.count <= 0) {
                 HStack (spacing: 30){
-                    Text("\(product.price) ₸").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    Text("\(product.price) ₸").fontWeight(.bold)
                     Image(systemName: "plus")
                         .foregroundColor(.green)
                         .font(.system(size: 20, weight: .bold))
@@ -33,22 +33,22 @@ struct ProductCardButton: View {
                         if product.count == 1 {
                             cartData.removeFromCart(product: product)
                             product.count -= 1
-
+                            
                         } else {
                             cartData.removeFromCart(product: product)
                             product.count -= 1
                             cartData.addToCart(product: product)
-                    }
+                        }
                         
-
-
+                        
+                        
                     })
                     {
                         Image(systemName: "minus")
                             .font(.system(size: 20, weight: .bold))
                     }
                     Text("\(product.count)")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                     Button(action: {
                         product.count += 1
                         if(cartData.products.contains(product)) {
@@ -58,7 +58,7 @@ struct ProductCardButton: View {
                     }) {
                         Image(systemName: "plus")
                             .font(.system(size: 20, weight: .bold))
-                            
+                        
                     }
                 }
             }

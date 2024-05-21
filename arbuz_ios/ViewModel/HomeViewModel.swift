@@ -11,7 +11,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var offset: CGFloat = 0
     @Published var selectedProduct: Product = products[0]
-
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -21,12 +21,12 @@ class HomeViewModel: ObservableObject {
     @Published var scrollProducts = products
     @Published var gridProducts = groceryProducts
     @Published var showingBottomSheet = false
-
+    
     
     func fetchData() {
         product = headerProducts.randomElement()!
         headProducts = headerProducts
         scrollProducts = products
         gridProducts = groceryProducts
-        }
+    }
 }

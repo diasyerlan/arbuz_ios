@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CartViewControllerRepresentable: UIViewControllerRepresentable {
     @EnvironmentObject var cartData: CartViewModel
-
+    
     func makeUIViewController(context: Context) -> CartViewController {
         let viewController = CartViewController()
         return viewController
     }
-
+    
     func updateUIViewController(_ uiViewController: CartViewController, context: Context) {
         uiViewController.updateCartProducts(cartData.products)
     }

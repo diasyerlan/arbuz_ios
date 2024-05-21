@@ -19,9 +19,9 @@ struct HeaderView: View {
                     Spacer(minLength: 20)
                     CardView(isForHeader: true, size: 0, product: $product)
                     Divider()
-
+                    
                 }
-                    .opacity(homeData.offset > 200 ? 1 - (homeData.offset - 200) / 50.0 : 1)
+                .opacity(homeData.offset > 200 ? 1 - (homeData.offset - 200) / 50.0 : 1)
                 VStack {
                     Text("Fast. Beautiful. Delicious.")
                         .font(.title)
@@ -29,13 +29,13 @@ struct HeaderView: View {
                     Divider()
                 }
                 .opacity(homeData.offset > 200 ? (homeData.offset - 200) / 50.0 : 0)
-
-                    
-            }
                 
+                
+            }
             
             
-          
+            
+            
         }.padding(.horizontal)
             .frame(height: 50)
             .background(Color.white)

@@ -18,8 +18,8 @@ struct Product: Identifiable, Equatable{
 }
 
 func ==(lhs: Product, rhs: Product) -> Bool {
-       return lhs.id == rhs.id && lhs.title == rhs.title
-   }
+    return lhs.id == rhs.id && lhs.title == rhs.title
+}
 
 var headerProducts = [
     Product(title: "Bananas", price: 500, image: "bananas", description: "Fresh and ripe bananas", isFavorite: false, count: 0),

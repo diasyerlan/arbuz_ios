@@ -9,12 +9,12 @@ import Foundation
 class CartViewModel: ObservableObject {
     @Published var products: [Product] = [] {
         didSet {
-                    updateTotal()
-                }
+            updateTotal()
+        }
     }
     @Published var total: Int = 0
     @Published var isLoading = false
-
+    
     
     func addToCart (product: Product) {
         products.append(product)
@@ -25,6 +25,6 @@ class CartViewModel: ObservableObject {
     }
     private func updateTotal() {
         total = products.reduce(0) { $0 + $1.price * $1.count }
-        }
+    }
     
 }
