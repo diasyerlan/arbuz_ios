@@ -31,6 +31,9 @@ struct HomeView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset : 0)).cornerRadius(15).offset(y: (offset > 0 ? -offset : 0))
+                                .onTapGesture {
+                                    homeData.showingBottomSheet.toggle()
+                                }
                             
                         )
                         
