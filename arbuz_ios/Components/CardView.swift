@@ -23,8 +23,35 @@ struct CardView: View {
                                     .frame(width: size, height: size)
                                     .cornerRadius(10)
                                     .onTapGesture {
+                                        homeData.selectedProduct = product
                                         homeData.showingBottomSheet.toggle()
                                     }
+                                    .sheet(isPresented: $homeData.showingBottomSheet, content: {
+                                        if #available(iOS 16.0, *) {
+                                            ZStack {
+                                                ProductDetailsView(product: $homeData.selectedProduct)
+                                                    .presentationDetents([.medium])
+                                                    .cornerRadius(10)
+                                                    .onAppear {
+                                                        startFakeNetworkCall()
+                                                    }
+                                                    .onDisappear{
+                                                        if let index = homeData.scrollProducts.firstIndex(where: { $0.id == homeData.selectedProduct.id }) {
+                                                            homeData.scrollProducts[index] = homeData.selectedProduct
+                                                                }
+                                                        if(homeData.product.id == homeData.selectedProduct.id) {
+                                                            homeData.product = homeData.selectedProduct
+                                                            }
+                                                        if let index = homeData.gridProducts.firstIndex(where: { $0.id == homeData.selectedProduct.id }) {
+                                                            homeData.gridProducts[index] = homeData.selectedProduct
+                                                                }
+                                                    }
+                                                if cartData.isLoading {
+                                                    LoadingView(isForCard: true)
+                                                }
+                                            }
+                                        } 
+                                    })
                             }
                 Spacer(minLength: 5)
                 HStack {
@@ -53,16 +80,12 @@ struct CardView: View {
         .padding(.horizontal)
         .environmentObject(cartData)
         .environmentObject(homeData)
-        .sheet(isPresented: $homeData.showingBottomSheet, content: {
-            if #available(iOS 16.0, *) {
-                ProductDetailsView(product: $product)
-                    .presentationDetents([.medium])
-                    .cornerRadius(10)
-            } else {
-                ProductDetailsView(product: $product)
-                }
-        })
-
+    }
+    func startFakeNetworkCall() {
+        cartData.isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            cartData.isLoading = false
+        }
     }
         
 }

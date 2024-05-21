@@ -26,7 +26,9 @@ struct CartView: View {
                         CartHeaderView()
                         Spacer(minLength: 5)
                         ScrollView {
-                            CartViewControllerRepresentable(cartProducts: cartData.products)
+                            CartViewControllerRepresentable()
+                                .environmentObject(cartData)
+                        }.onAppear{
                         }
                         .environmentObject(cartData)
                         HStack {
@@ -68,7 +70,7 @@ struct CartView: View {
                     }
                 }
                 if cartData.isLoading {
-                    LoadingView()
+                    LoadingView(isForCard: false)
                 }
             }
         }
@@ -104,15 +106,3 @@ struct CartHeaderView: View {
 
 
 
-struct LoadingView: View {
-    var body: some View {
-        ZStack {
-            Spacer()
-                .background(Color.black.opacity(0.1))
-                .ignoresSafeArea()
-            ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .black))
-                .scaleEffect(3)
-        }
-    }
-}

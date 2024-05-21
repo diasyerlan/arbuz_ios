@@ -32,6 +32,7 @@ struct HomeView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset : 0)).cornerRadius(15).offset(y: (offset > 0 ? -offset : 0))
                                 .onTapGesture {
+                                    homeData.selectedProduct = homeData.product
                                     homeData.showingBottomSheet.toggle()
                                 }
                             
@@ -47,7 +48,6 @@ struct HomeView: View {
                             HStack{
                                 ForEach($homeData.scrollProducts) { product in
                                     CardView(isForHeader: false, size: 130, product: product)
-                                    
                                 }
                             }
                         }.padding()
