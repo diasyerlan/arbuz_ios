@@ -83,7 +83,7 @@ struct CardView: View {
     }
     func startFakeNetworkCall() {
         cartData.isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
             cartData.isLoading = false
         }
     }

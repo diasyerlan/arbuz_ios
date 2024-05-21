@@ -20,58 +20,60 @@ struct CartView: View {
     @EnvironmentObject var cartData: CartViewModel
     var body: some View {
         NavigationView {
-            VStack {
-                if(cartData.products.count > 0) {
-                    CartHeaderView()
-                    Spacer(minLength: 5)
-                    GeometryReader { geometry in
-                        ScrollView(.vertical) {
-                            CartViewControllerRepresentable()
-                                .environmentObject(cartData)
-                                .frame(width: geometry.size.width, height: geometry.size.height*3/2)
+            ZStack {
+                VStack {
+                    if(cartData.products.count > 0) {
+                        CartHeaderView()
+                        Spacer(minLength: 5)
+                        GeometryReader { geometry in
+                            ScrollView(.vertical) {
+                                CartViewControllerRepresentable()
+                                    .environmentObject(cartData)
+                                    .frame(width: geometry.size.width, height: geometry.size.height*3/2)
+                            }
+                        }
+                        .environmentObject(cartData)
+                        HStack {
+                            Text("Total: ")
+                                .font(.title)
+                            Text("\(cartData.total) ₸")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            Spacer()
+                            Button(action: {
+                                startFakeNetworkCall()
+                            }, label: {
+                                Text("Checkout").bold()
+                                NavigationLink(destination: CheckoutView(), isActive:$shouldNavigate) {
+                                }
+                                .hidden()
+                                
+                            })
+                            .padding(10)
+                            .background(Color.green)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(15)
+                        }
+                        .padding()
+                    } else {
+                        VStack {
+                            Spacer()
+                            Text("Your cart is empty :/")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            Spacer()
                         }
                     }
-                    .environmentObject(cartData)
-                    HStack {
-                        Text("Total: ")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        Text("\(cartData.total) ₸")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                        Button(action: {
-                            startFakeNetworkCall()
-                        }, label: {
-                            Text("Checkout").bold()
-                            NavigationLink(destination: CheckoutView(), isActive:$shouldNavigate) {
-                            }
-                            .hidden()
-                            
-                        })
-                        .padding(10)
-                        .background(Color.green)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(15)
-                    }
-                    .padding()
-                } else {
-                    VStack {
-                        Spacer()
-                        Text("Your cart is empty :/")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        Spacer()
+                    
+                }
+                .onAppear{
+                    if(cartData.total > 0 && cartData.total < 8000) {
+                        showToast = true
                     }
                 }
-                
-            }
-            .onAppear{
-                if(cartData.total > 0 && cartData.total < 8000) {
-                    showToast = true
+                if cartData.isLoading {
+                    LoadingView(isForCard: false)
                 }
-            }
-            if cartData.isLoading {
-                LoadingView(isForCard: false)
             }
         }
         .simpleToast(isPresented: $showToast, options: toastOptions) {
