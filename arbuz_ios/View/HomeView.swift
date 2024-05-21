@@ -92,3 +92,8 @@ struct CustomTitle: View {
     }
 }
 
+#Preview {
+    HomeView()
+        .environmentObject(HomeViewModel())
+        .environmentObject(CartViewModel())
+}
