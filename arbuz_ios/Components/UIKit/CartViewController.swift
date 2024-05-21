@@ -30,7 +30,8 @@ class CartViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
-        
+        collectionView.isScrollEnabled = false
+
         view.addSubview(collectionView)
     }
     
