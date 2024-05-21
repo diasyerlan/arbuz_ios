@@ -65,7 +65,7 @@ struct CartView: View {
                     
                 }
                 .onAppear{
-                    if(cartData.total > 0 && cartData.total <= 8000) {
+                    if(cartData.total > 0 && cartData.total < 8000) {
                         showToast = true
                     }
                 }
@@ -76,7 +76,7 @@ struct CartView: View {
         }
         .simpleToast(isPresented: $showToast, options: toastOptions) {
             HStack{
-                Image(systemName: "checkmark.circle")
+                Image(systemName: "car.side.fill")
                 Text( "\(8000-cartData.total) ₸ left until free delivery").bold()
             }
             .padding(20)
@@ -91,16 +91,16 @@ struct CartView: View {
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             cartData.isLoading = false
             shouldNavigate = true
-
+            
         }
     }
 }
 
 struct CartHeaderView: View {
     var body: some View {
-            Text("My Cart")
-                .font(.title)
-                .fontWeight(.bold)
+        Text("My Cart")
+            .font(.title)
+            .fontWeight(.bold)
     }
 }
 

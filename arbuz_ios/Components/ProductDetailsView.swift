@@ -19,7 +19,7 @@ struct ProductDetailsView: View {
             HStack {
                 Text(product.title)
                     .font(.title)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                 Spacer()
                 ProductCardButton(product: $product)
             }.padding(.horizontal)
@@ -29,7 +29,7 @@ struct ProductDetailsView: View {
             
             Spacer()
         }.environmentObject(cartData)
-        .environmentObject(homeData)
+            .environmentObject(homeData)
     }
 }
 

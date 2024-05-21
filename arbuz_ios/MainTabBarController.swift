@@ -12,20 +12,20 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let homeViewModel = HomeViewModel()
         let cartViewModel = CartViewModel()
-
+        
         let homeView = HomeView()
             .environmentObject(homeViewModel)
             .environmentObject(cartViewModel)
         let cartView = CartView()
             .environmentObject(homeViewModel)
             .environmentObject(cartViewModel)
-
+        
         let homeVC = UIHostingController(rootView: homeView)
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-
+        
         let cartVC = UIHostingController(rootView: cartView)
         cartVC.tabBarItem = UITabBarItem(title: "Cart", image: UIImage(systemName: "cart"), tag: 1)
         
