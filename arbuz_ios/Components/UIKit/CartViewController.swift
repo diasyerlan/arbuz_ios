@@ -9,7 +9,11 @@ import UIKit
 
 class CartViewController: UIViewController {
     var collectionView: UICollectionView!
-    var cartProducts: [Product] = []
+    var cartProducts: [Product] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,10 @@ class CartViewController: UIViewController {
         collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
         
         view.addSubview(collectionView)
+    }
+    
+    func updateCartProducts(_ products: [Product]) {
+        self.cartProducts = products
     }
 }
 

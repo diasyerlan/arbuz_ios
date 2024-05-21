@@ -10,7 +10,8 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     
     @Published var offset: CGFloat = 0
-    
+    @Published var selectedProduct: Product = products[0]
+
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())

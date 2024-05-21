@@ -6,19 +6,16 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct CartViewControllerRepresentable: UIViewControllerRepresentable {
-    var cartProducts: [Product]
+    @EnvironmentObject var cartData: CartViewModel
 
     func makeUIViewController(context: Context) -> CartViewController {
         let viewController = CartViewController()
-        viewController.cartProducts = cartProducts
         return viewController
     }
 
     func updateUIViewController(_ uiViewController: CartViewController, context: Context) {
-        uiViewController.cartProducts = cartProducts
-        uiViewController.collectionView.reloadData()
+        uiViewController.updateCartProducts(cartData.products)
     }
 }

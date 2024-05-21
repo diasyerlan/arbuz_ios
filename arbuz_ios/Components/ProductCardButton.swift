@@ -18,8 +18,6 @@ struct ProductCardButton: View {
                 cartData.removeFromCart(product: product)
             }
             cartData.addToCart(product: product)
-            print(cartData.products)
-            print("\n")
             
         }) {
             if(product.count <= 0) {
@@ -34,8 +32,15 @@ struct ProductCardButton: View {
                     Button(action: {
                         if product.count == 1 {
                             cartData.removeFromCart(product: product)
-                        }
-                        product.count -= 1
+                            product.count -= 1
+
+                        } else {
+                            cartData.removeFromCart(product: product)
+                            product.count -= 1
+                            cartData.addToCart(product: product)
+                    }
+                        
+
 
                     })
                     {
@@ -50,10 +55,6 @@ struct ProductCardButton: View {
                             cartData.removeFromCart(product: product)
                         }
                         cartData.addToCart(product: product)
-                        print(cartData.products)
-
-                        print("\n")
-
                     }) {
                         Image(systemName: "plus")
                             .font(.system(size: 20, weight: .bold))
